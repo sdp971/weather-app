@@ -1,0 +1,22 @@
+header{
+  width: 100%;
+      display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding-right: 32px;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
