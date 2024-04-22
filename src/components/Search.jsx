@@ -1,6 +1,7 @@
 import { useState,useEffect} from 'react';
 import './Search.css';
 import axios from 'axios';
+import propTypes from 'prop-types';
 
 function Search({onAddFavorite}) {
   const [citySearched, setCitySearched] = useState('');
@@ -83,3 +84,7 @@ function Search({onAddFavorite}) {
 }
 
 export default Search;
+
+Search.propTypes = {
+  onAddFavorite: propTypes.func,
+}

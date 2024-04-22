@@ -4,7 +4,7 @@ function NavBar() {
     <header>
       <ul>
         <li>
-          <Link to='/accueil'>Accueil</Link>
+          <Link to='/'>Accueil</Link>
         </li>
         <li>
           <Link to='/favorites'>Villes préférées</Link>

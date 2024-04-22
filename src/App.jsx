@@ -25,9 +25,11 @@ function handleAddFavorite  (newFavorite)  {
     <>
       <Router>
         <NavBar />
+      
+
         <Routes>
           <Route
-            path='/accueil'
+            path='/'
             element={<Search onAddFavorite={handleAddFavorite} />}
           />
           <Route
@@ -44,7 +46,6 @@ function handleAddFavorite  (newFavorite)  {
               </div>
             ))}
           />
-        
         </Routes>
       </Router>
     </>
