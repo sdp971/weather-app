@@ -2,9 +2,10 @@ import { useState,useEffect} from 'react';
 import './Search.css';
 import axios from 'axios';
 
-function Search() {
+function Search({onAddFavorite}) {
   const [citySearched, setCitySearched] = useState('');
   const [data, setData] = useState([]);
+
 
   const apiKey = import.meta.env.VITE_APP_API_KEY
 
@@ -37,6 +38,23 @@ function Search() {
      }
    }
   
+  function handleClick(i) {
+    console.log(citySearched);
+    
+  
+    const newFavorite = {
+      name:citySearched,
+      main:data[i].main,
+      description: data[i].description,
+      icon: data[i].icon
+
+    }
+      onAddFavorite(newFavorite);
+
+    
+  }
+
+
 
  
   return (
@@ -57,8 +75,9 @@ function Search() {
           <img src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="" />
           <p >{weather.main}</p>
           <p>{weather.description}</p>
+          <button type='submit' onClick={() => handleClick( i )}>Mettre dans favoris</button>
         </div>
-      ))):(<p></p>)}
+      ))):(<p>Aucune ville trouvée</p>)}
     </div>
   );
 }
