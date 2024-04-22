@@ -2,16 +2,18 @@
 
 
 import './App.css'
+import Search from './components/Search'
 
 function App() {
 
 
   return (
    
-      <div>
-     <h1>Weather app</h1>
+      <main>
+     
+      <Search/>
  
-      </div>
+      </main>
     
   )
 }
