@@ -1,23 +1,13 @@
-
-
-
 import { useState } from 'react';
-import './App.css'
+import './App.css';
 import NavBar from './components/NavBar';
-import Search from './components/Search'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Search from './components/Search';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-    const [favoritList, setFavoritList] = useState([
-    {
-      citySearched: "",
-      main: "",
-      description: "",
-      icon: "",
-    }
-  ]);
+  const [favoritList, setFavoritList] = useState([]);
 
-function handleAddFavorite  (newFavorite)  {
+  function handleAddFavorite(newFavorite) {
     setFavoritList((prevList) => [...prevList, newFavorite]);
   }
 
@@ -25,7 +15,6 @@ function handleAddFavorite  (newFavorite)  {
     <>
       <Router>
         <NavBar />
-      
 
         <Routes>
           <Route
@@ -52,4 +41,4 @@ function handleAddFavorite  (newFavorite)  {
   );
 }
 
-export default App
+export default App;
